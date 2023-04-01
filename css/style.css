@@ -1,3 +1,8 @@
+/*
+Creditos: https://www.youtube.com/channel/UC1R99C9hNNVb9GBa89DVq2g
+
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
 *
@@ -104,6 +109,7 @@ body{
 
 }
 
+
 .indicador::before {
     content: '';
     position: absolute;
@@ -114,17 +120,7 @@ body{
     border-radius: 10px;
 }
 
-.indicador::after{
-    content: '';
-    position: absolute;
-    top: -3px;
-    width: 7.5px;
-    height: 7.5px;
-    border-radius: 50%;
-    background: #333;
-    box-shadow: 0 0 0 2px rgb(8, 163, 29);
 
-}
 
 
 .navigation ul li:nth-child(2).active ~ .indicador{
@@ -147,6 +143,36 @@ body{
 
 
 
+
+.indicador::after{
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 50%;
+    background: #333;
+    box-shadow: 0 0 0 2px rgb(8, 163, 29), 50px 50px rgb(8, 163, 29), 40px 0 rgb(8, 163, 29), 0 40px rgb(8, 163, 29) ;
+    transform: rotate(40deg);
+    animation:  animate 2s ease-in-out infinite;
+
+}
+
+@keyframes animate {
+    0%,100%
+    {
+        transform:  rotate(35deg);
+    }
+    50%
+    {
+        transform:  rotate(45deg);
+    }
+}
+
+
+.navigation ul li:hover a .icon{
+    color: rgba(224, 216, 216,1);
+}
 
 
 
